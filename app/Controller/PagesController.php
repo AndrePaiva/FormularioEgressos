@@ -37,7 +37,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Egresso');
+	public $uses = array('Egresso', 'Pergunta');
 
 /**
  * Displays a view
@@ -48,6 +48,12 @@ class PagesController extends AppController {
  *	or MissingViewException in debug mode.
  */
 	public function display() {
+
+		$this->set('red', 'vermelho');
+		$this->set('perguntas', $this->Pergunta->find('all'));
+		
+
+
 		$path = func_get_args();
 
 		$count = count($path);

@@ -1,9 +1,8 @@
 <?php
-class EgressosController extends Controller {
-	public $uses = 'Egresso';
+class EgressosController extends AppController {
+	public $uses = array('Egresso');
 
 	public function index() {
-
 	}
 
 	public function add() {
