@@ -1,5 +1,5 @@
 
-<h1>Add Post</h1>
+
 <?php
 
 
@@ -51,13 +51,18 @@ $options=array('Privada'=>'Privada','Pública'=>'Pública', 'Organização não 
 $attributes=array('legend' => '17. '. utf8_encode($perguntas[0]['Pergunta']['empresa_funcao']));
 echo $this->Form->radio('empresa',$options,$attributes);
 
-$options=array('até 1 salário mínimo(R$724,00)'=>'até 1 salário mínimo(R$724,00)','De R$724,00 até R$2.172,00'=>'De R$724,00 até R$2.172,00', 'De R$2.173,00 até R$3.344,00'=>'De R$2.173,00 até R$3.344,00','De R$3.345,00 até R$4.800,00' =>'De R$3.345,00 até R$4.800,00','De R$4.800,00 até R$6.515,00' => 'De R$4.800,00 até R$6.515,00','De R$6.516,00 até R$8.688,00' => 'De R$6.516,00 até R$8.688,00','Acima de R$8.688,00' => 'Acima de R$8.688,00');
+$options=array('até 1 salário mínimo(R$ 724,00)'=>'até 1 salário mínimo(R$ 724,00)','De R$ 724,00 até R$ 2.172,00'=>'De R$ 724,00 até R$ 2.172,00', 'De R$ 2.173,00 até R$ 3.344,00'=>'De R$ 2.173,00 até R$ 3.344,00','De R$ 3.345,00 até R$ 4.800,00' =>'De R$ 3.345,00 até R$ 4.800,00','De R$ 4.800,00 até R$ 6.515,00' => 'De R$ 4.800,00 até R$ 6.515,00','De R$ 6.516,00 até R$ 8.688,00' => 'De R$ 6.516,00 até R$ 8.688,00','Acima de R$ 8.688,00' => 'Acima de R$ 8.688,00');
 $attributes=array('legend' => '18. '. utf8_encode($perguntas[0]['Pergunta']['salario']));
 echo $this->Form->radio('faixa_salarial
 	',$options,$attributes);
 
 //questao 19
-echo "19. Atribua nota de 01 (um - menor valor) a 10 (dez - maior valor) referente a sua formação na Fa7? <br/>";
+echo $this->Form->input('field', array(
+    'options' => array(1, 2, 3, 4, 5),
+    'empty' => '(choose one)'
+));
+
+echo "19. Atribua nota de 01 (um - menor valor) a 10 (dez - maior valor) referente a sua formação na FA7? <br/>";
 $options = array('type'=>'number', 'min' => 1, 'max' => 10, 'label'=>'a.'. utf8_encode($perguntas[0]['Pergunta']['conteudos_programas']));
 echo $this ->Form->input('conteudos_programas', $options);
 
@@ -80,7 +85,7 @@ $options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'g. '. utf8
 echo $this ->Form->input('disciplina_estagio', $options);
 
 //questao 20
-echo "20. Atribua nota de 01 (um - menor valor) a 5 (dez - maior valor) referente a sua formação na Fa7? <br/>";
+echo "20. Atribua nota de 01 (um - menor valor) a 5 (dez - maior valor) referente a sua formação na FA7? <br/>";
 
 $options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'a.'. utf8_encode($perguntas[0]['Pergunta']['ensino']));
 echo $this ->Form->input('ensino', $options);

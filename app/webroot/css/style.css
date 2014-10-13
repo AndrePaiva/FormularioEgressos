@@ -7,7 +7,7 @@ fieldset legend {
 input[type=radio] {
 	float:left;
 	width:auto;
-	margin: 4px 0;
+	margin: 4px;
 	padding: 0;
 	line-height: 26px;
 }
