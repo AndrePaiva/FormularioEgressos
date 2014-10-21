@@ -49,7 +49,6 @@ class PagesController extends AppController {
  */
 	public function display() {
 
-		$this->set('red', 'vermelho');
 		$this->set('perguntas', $this->Pergunta->find('all'));
 		
 

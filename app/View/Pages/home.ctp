@@ -57,43 +57,45 @@ echo $this->Form->radio('faixa_salarial
 	',$options,$attributes);
 
 //questao 19
-echo $this->Form->input('field', array(
-    'options' => array(1, 2, 3, 4, 5),
-    'empty' => '(choose one)'
-));
+// echo $this->Form->input('field', array(
+//     'options' => array(1, 2, 3, 4, 5),
+//     'empty' => '(choose one)'
+// ));
 
 echo "19. Atribua nota de 01 (um - menor valor) a 10 (dez - maior valor) referente a sua formação na FA7? <br/>";
-$options = array('type'=>'number', 'min' => 1, 'max' => 10, 'label'=>'a.'. utf8_encode($perguntas[0]['Pergunta']['conteudos_programas']));
+
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota','label'=> 'a. '. utf8_encode($perguntas[0]['Pergunta']['conteudos_programas']));
 echo $this ->Form->input('conteudos_programas', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'b. '. utf8_encode($perguntas[0]['Pergunta']['termos_experiencia']));
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota','label'=> 'b. '. utf8_encode($perguntas[0]['Pergunta']['termos_experiencia']));
 echo $this ->Form->input('termos_experiencia', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'c. '. utf8_encode($perguntas[0]['Pergunta']['formacao_teorica']));
+
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota', 'label'=>'c. '. utf8_encode($perguntas[0]['Pergunta']['formacao_teorica']));
 echo $this ->Form->input('formacao_teorica', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'d. '. utf8_encode($perguntas[0]['Pergunta']['formacao_cidadania']));
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota', 'label'=>'d. '. utf8_encode($perguntas[0]['Pergunta']['formacao_cidadania']));
 echo $this ->Form->input('formacao_cidadania', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'e. '. utf8_encode($perguntas[0]['Pergunta']['formacao_contexto']));
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota', 'label'=>'e. '. utf8_encode($perguntas[0]['Pergunta']['formacao_contexto']));
 echo $this ->Form->input('formacao_contexto', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'f. '. utf8_encode($perguntas[0]['Pergunta']['formacao_flexibilidade']));
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota', 'label'=>'f. '. utf8_encode($perguntas[0]['Pergunta']['formacao_flexibilidade']));
 echo $this ->Form->input('formacao_flexibilidade', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'g. '. utf8_encode($perguntas[0]['Pergunta']['disciplina_estagio']));
+$options = array('options' => array(1,2,3,4,5,6,7,8,9,10), 'empty' => 'Selecione a nota', 'label'=>'g. '. utf8_encode($perguntas[0]['Pergunta']['disciplina_estagio']));
 echo $this ->Form->input('disciplina_estagio', $options);
 
 //questao 20
-echo "20. Atribua nota de 01 (um - menor valor) a 5 (dez - maior valor) referente a sua formação na FA7? <br/>";
+echo "20. Atribua nota de 01 (um - menor valor) a 5 (cinco - maior valor) referente a sua formação na FA7? <br/>";
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'a.'. utf8_encode($perguntas[0]['Pergunta']['ensino']));
+$options = array('options' => array(1,2,3,4,5), 'empty' => 'Selecione a nota', 'label'=>'a.'. utf8_encode($perguntas[0]['Pergunta']['ensino']));
 echo $this ->Form->input('ensino', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'b. '. utf8_encode($perguntas[0]['Pergunta']['estrutura']));
+$options = array('options' => array(1,2,3,4,5), 'empty' => 'Selecione a nota', 'label'=>'b. '. utf8_encode($perguntas[0]['Pergunta']['estrutura']));
 echo $this ->Form->input('estrutura', $options);
 
-$options = array('type'=>'number', 'min' => 0, 'max' => 10, 'label'=>'c. '. utf8_encode($perguntas[0]['Pergunta']['reconhecimento']));
+$options = array('options' => array(1,2,3,4,5), 'empty' => 'Selecione a nota', 'label'=>'c. '. utf8_encode($perguntas[0]['Pergunta']['reconhecimento']));
 echo $this ->Form->input('reconhecimento', $options);
 
 echo $this->Form->input('outro_curso', array('label' => '21. '. utf8_encode($perguntas[0]['Pergunta']['cursando_ou'] ) ));
